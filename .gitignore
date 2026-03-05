@@ -4,32 +4,31 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-*.egg
 *.egg-info/
 dist/
 build/
-.eggs/
+*.egg
 
 # Virtual environments
 .venv/
 venv/
 env/
 
-# pytest cache
-.pytest_cache/
-
-# Environment variable files (may contain secrets)
-.env
-.env.*
-
-# IDE / editor artefacts
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# macOS
-.DS_Store
+# Secrets – NEVER commit API keys
+secrets.env
+.env
+*.key
 
-# Jupyter notebooks checkpoints
-.ipynb_checkpoints/
+# Data files – download via data_downloader.py and upload to QC separately
+data/cushing_inventory.csv
+data/fred_data.csv
+
+# OS
+.DS_Store
+Thumbs.db
